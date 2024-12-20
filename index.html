@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseMove</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img{
+    width: 450px;
+    height: 300px;
+
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px 0;
+    transform-style: preserve-3d;
+}
+.container .box{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin: 60px 0;
+    margin: 20px;
+    background: black;
+    background: black;
+    transform-style: preserve-3d;
+}
+
+.container .box .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+
+}
+
+.container .box .contentbx{
+    position: absolute;
+    top: 10rem;
+    left: 50px;
+    right: 50px;
+    color: aliceblue;
+    background: #3c3737;
+    transform: translateZ(90px) scale(0);
+    padding: 40px 25px;
+    transform-origin: top;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+
+}
+
+.container .box:hover .contentbx{
+    transform: translateZ(50px) scaleY(1);
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="imgbx">
+                <img src="images/photo-1.jpg">
+            </div>
+            <div class="contentbx">
+                <h2>Navigating Opportunities </h2>
+                <p>Technology drives our world forward, transforming how we live, work, and connect. 
+                    Its rapid evolution continues to open new possibilities and reshape our future. </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbx">
+                <img src="images/photo-2.jpg">
+            </div>
+            <div class="contentbx">
+                <h2>Innovations: Shaping Our Future</h2>
+                <p>Its rapid evolution continues to open new possibilities and reshape our future. With each advancement, 
+                    technology brings both opportunities and challenges that we must navigate wisely.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="vanillajs/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 25,
+            speed: 400
+        });
+        
+    
+    </script>
+</body>
+</html>
+
+
